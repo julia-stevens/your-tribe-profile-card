@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
+
 * {
   box-sizing: border-box;
 }
@@ -7,6 +10,19 @@ html {
 }
 
 body {
+  font-family: "Nanum Pen Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+  background: #FBFAE8;
+  background-image: radial-gradient(#CCCCCC 1px, transparent 0);
+  background-size: 40px 40px;
+  background-position: -19px -19px;
+}
+
+
+
+
+/* body {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,8 +41,8 @@ article {
   max-width: 25em;
   min-width: 20em;
   border-radius: 1rem;
-  background: rgb(0,239,255);
-  background: linear-gradient(0deg, rgba(0,239,255,1) 40%, #4e54c8 100%);
+  background: rgb(68, 50, 168);
+  background: linear-gradient(0deg, rgb(106, 0, 255) 40%, #9397e8 100%);
   box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
   transition: .25s;
 }
@@ -41,7 +57,7 @@ header {
 
 h1 {
   margin: 2rem 0 1rem;
-  color: rgba(0,239,255,1);
+  color: rgb(44, 8, 85);
 }
 
 button {
@@ -53,7 +69,7 @@ button {
   padding: .25rem;
   border: none;
   border-radius: 50%;
-  background: rgba(0,239,255,1);
+  background: rgb(108, 100, 206);
   transform: scale(.8);
   transition: .25s;
 }
@@ -62,7 +78,7 @@ button:focus {
   background: #202592;
 }
 button:focus svg {
-  stroke: rgba(0,239,255,1);
+  stroke: rgb(139, 118, 205);
 }
 
 svg {
@@ -81,7 +97,7 @@ img {
   position: relative;
   top: 2rem;
   width: 10em;
-  height: auto;
+  height: 10em;
   border: 5px solid #fff;
   border-radius: 10em;
   box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
@@ -144,7 +160,6 @@ article > p {
   background: rgba(255,255,255, 0.5);
 }
 
-/* expand content */
 body.expand {
   font-size: 1.15em;
 }
@@ -170,4 +185,5 @@ body.expand dd {
 
 body.expand img {
   width: 15em;
-}
+  height: 15em;
+} */
