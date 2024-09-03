@@ -5,105 +5,101 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FDND Visitekaartje</title>
     <link rel="stylesheet" href="styles/style.css">
+    <!-- FONT -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
   </head>
   <body>
 
-    <header>
-      <img src="" alt="img-schets-mijzelf">
-      <div class="header-text">
-          <p>Ik ben</p>
-          <h1>Julia</h1>
-          <h2>welkom in mijn notebook</h2>
-      </div>
-    </header>
+    <main>
+      <!-- DESKTOP ITEMS LINKS -->
+      <section class="desktop-icons">
+        <figure id="figure1">
+          <img src="/assets/desktop-icons/icon-browser.png" alt="retro icoon browser">
+          <figcaption>mijn hond</figcaption>
+        </figure>
+        <figure id="figure2">
+          <img src="/assets/desktop-icons/icon-folder.png" alt="retro icoon browser">
+          <figcaption>sushi</figcaption>
+        </figure>
+        <figure id="figure3">
+          <img src="/assets/desktop-icons/icon-doc.png" alt="retro icoon browser">
+          <figcaption>crochet</figcaption>
+        </figure>
+      </section>
 
-    <section class="dit-vind-ik-leuk">
-      <h2>dit vind ik leuk:</h2>
+      <!-- OPENED WINDOW -->
+      <section class="opened-window">
+         <!-- !!! article of div?? -->    
+   
+          <article class="window-bar">
+            <ul class="window-icons">
+              <li><button></button></li>
+              <li><button></button></li>
+              <li><button></button></li>
+            </ul>
+            <h2>visitekaartje.julia-stevens</h2>
+          </article>
+          <article class="window-main-content">
+            <img src="ssets/profile-picture.JPG" alt="Foto Julia Stevens">
+            <!-- !!! div?? -->
+            <div class="title-info">
+              <h1>Julia Stevens</h1>
+              <p>Hoi! Ik ben een frontender in spé. Ik wil vanalles leren over HTML, CSS en Javascript en nieuwe technieken blijven leren ontdekken. Bekijk mijn bureaublad mij iets beter te leren kennen.</p>
+            </div>
+          </article>
+          <!-- !!! deze button in de article of juist niet? ivm positionering op window -->
+          <button>OK</button>
+        </section>
 
-      <img src="" alt="img-mijn-hond">
-      <p>mijn hond</p>
+      <!-- DESKTOP ITEMS RECHTS -->
+      <section class="desktop-icons">
+        <figure id="figure4">
+          <img src="/assets/desktop-icons/icon-file.png" alt="retro icoon browser">
+          <figcaption>coderen</figcaption>
+        </figure>
+        <figure id="figure5">
+          <img src="/assets/desktop-icons/icon-images.png" alt="retro icoon browser">
+          <figcaption>films kijken</figcaption>
+        </figure>
+        <figure id="figure6">
+          <img src="/assets/desktop-icons/icon-notepad.png" alt="retro icoon browser">
+          <figcaption>vulpen</figcaption>
+        </figure>
+      </section>
 
-      <img src="" alt="img-coderen">
-      <p>coderen</p>
-
-      <img src="" alt="img-films-kijken">
-      <p>films kijken</p>
-
-      <img src="" alt="img-sushi">
-      <p>sushi</p>
-
-      <img src="" alt="img-crochet">
-      <p>crochet</p>
-
-      <img src="" alt="img-mijn-vulpen">
-      <p>mijn vulpen</p>
-    </section>
-
-    <section class="ik-werk-bij">
-      <h2>ik werk bij</h2>
-      <img src="" alt="img-logo-pathe">
-    </section>
-
-    <section class="dit-is-mijn-ambitie">
-      <h2>dit is mijn ambitie:</h2>
-      <p>frontender worden en alles leren over:</p>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JS</li>
-        <li>API</li>
-        <li>frameworks</li>
-        <li>etc...</li>
-      </ul>
-    </section>
-
-    
-    <!-- <article>
+        <!-- GRID CLICKED DESKTOP ITEMS -->
+         <!-- !!! is dit de juiste methode?? -->
+         <article class="desktop-icons-content">
+          <article id="item1" class="desktop-icons-items">
+            <h3>mijn hond</h3>
+            <img src="" alt="afbeelding mijn hond">
+          </article>
+          <article id="item2" class="desktop-icons-items">
+            <h3>sushi</h3>
+            <img src="" alt="afbeelding sushi">
+          </article>
+          <article id="item3" class="desktop-icons-items">
+            <h3>crochet</h3>
+            <img src="" alt="afbeelding crochet">
+          </article>
+          <article id="item4" class="desktop-icons-items">
+            <h3>coderen</h3>
+            <img src="" alt="afbeelding coderen">
+          </article>
+          <article id="item5" class="desktop-icons-items">
+            <h3>films kijken</h3>
+            <img src="" alt="afbeelding films kijken">
+          </article>
+          <article id="item6" class="desktop-icons-items">
+            <h3>vulpen</h3>
+            <img src="" alt="afbeelding vulpen">
+          </article>
+        </article>
       
-      <header>
-        
-        <h1>Julia Stevens</h1>
-        
-        <p><em>Creatieve Frontend Developer in spé</em></p>
-        
-        <button>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <title>Wijzig layout</title>
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M4 8v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M4 16v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M16 4h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M16 20h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-          <svg width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="red" fill="none" stroke-linecap="round" stroke-linejoin="round">
-            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-            <path d="M15 19v-2a2 2 0 0 1 2 -2h2"></path>
-            <path d="M15 5v2a2 2 0 0 0 2 2h2"></path>
-            <path d="M5 15h2a2 2 0 0 1 2 2v2"></path>
-            <path d="M5 9h2a2 2 0 0 0 2 -2v-2"></path>
-          </svg>
-        </button>
-        
-      </header>
-  
-      <img src="assets/julia-stevens-picture.JPG" alt="" width="800" height="800">
-
-      <dl>
-        <dt>HTML</dt>
-        <dd>🏆🏆🏆</dd>
-        
-        <dt>CSS</dt>
-        <dd>🏆🏆</dd>
-        
-        <dt>JavaScript</dt>
-        <dd>🏆🏆🏆🏆</dd>
-      </dl>
-  
-      <p>Het WEB is te gek! <br> Met HTML, CSS en JS kan ik vette, interactieve web apps maken.</p>
-      
-    </article>
-
-    <script src="scripts/script.js"></script> -->
-    
+    </main>
+  <script src="scripts/script.js"></script>   
   </body>
+
 </html>

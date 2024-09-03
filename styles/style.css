@@ -1,189 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
-
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  height: 100vh;
-}
-
+/* CURSOR and FONT */
 body {
-  font-family: "Nanum Pen Script", cursive;
+  cursor: url('/assets/cursor-image.png'), pointer;
+
+  font-family: "VT323", monospace;
   font-weight: 400;
   font-style: normal;
-  background: #FBFAE8;
-  background-image: radial-gradient(#CCCCCC 1px, transparent 0);
-  background-size: 40px 40px;
-  background-position: -19px -19px;
+  font-size: 16px;
+
+  width: 95vw;
+  margin: auto;
 }
 
-
-
-
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: open sans;
-  color: #10214e;
+.desktop-icons>figure:hover {
+  cursor: url('/assets/cursor-image-hover.png'), pointer;
 }
 
-article {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  width: 50vw;
-  max-width: 25em;
-  min-width: 20em;
-  border-radius: 1rem;
-  background: rgb(68, 50, 168);
-  background: linear-gradient(0deg, rgb(106, 0, 255) 40%, #9397e8 100%);
-  box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
-  transition: .25s;
+button:hover {
+  cursor: url('/assets/cursor-image-hover.png'), pointer;
 }
 
-header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-h1 {
-  margin: 2rem 0 1rem;
-  color: rgb(44, 8, 85);
-}
-
-button {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  width: 2.5rem;
-  height: 2.5rem;
-  padding: .25rem;
-  border: none;
-  border-radius: 50%;
-  background: rgb(108, 100, 206);
-  transform: scale(.8);
-  transition: .25s;
-}
-button:focus {
-  outline: none;
-  background: #202592;
-}
-button:focus svg {
-  stroke: rgb(139, 118, 205);
-}
-
-svg {
-  position: absolute;
-  top: calc(1.25rem - 12px);
-  left: calc(1.25rem - 12px);
-  stroke: #4e54c8;
-  transition-delay: .25s;
-}
-button svg:nth-of-type(2) {
-  opacity: 0;
-  transition-delay: 0ms;
-}
-
-img {
-  position: relative;
-  top: 2rem;
-  width: 10em;
-  height: 10em;
-  border: 5px solid #fff;
-  border-radius: 10em;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
-  transition: .25s .15s;
-}
-
-dl {
+/* ALIGNMENT MAIN */
+main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas:
-    "html-dd css-dd js-dd"
-    "html-dt css-dt js-dt"
-    ;
-  justify-items: center;
-  align-items: start;
-  width: 100%;
-  margin-top: -3rem;
-  margin-bottom: 0;
-  padding: 5rem 0 3rem;
-  text-align: center;
-  background: rgb(255,255,255);
+  grid-template-columns: repeat(3, 1fr);
+  align-self: center;
 }
 
-dt {
-  margin-top: .25rem;
-  padding-top: .25rem;
-  border-top: 1px solid rgba(0,0,0,0.3);
-  font-weight: bold;
-}
-dt:nth-of-type(1) {
-  grid-area: html-dt;
-}
-dt:nth-of-type(2) {
-  grid-area: css-dt;
-  transform: translateY(1rem);
-}
-dt:nth-of-type(3) {
-  grid-area: js-dt;
+section:nth-child(1) {
+  grid-column: 1;
+  justify-self: start;
+  /* horizontale alignment (inline) */
+  align-self: center;
+  /* verticale alignment (block) */
 }
 
-dd {
-  margin: 0;
-  padding-left: .3rem;
-  transition: .25s .3s;
-}
-dd:nth-of-type(2){  
-  transform: translateY(1rem);
-}
-
-p { 
-  margin: 0;
+section:nth-child(2) {
+  grid-column: 2;
+  justify-self: center;
+  /* horizontale alignment (inline) */
+  align-self: center;
+  /* verticale alignment (block) */
 }
 
-article > p {
-  width: 100%;
-  margin-top: 0;
-  padding: 3rem 2rem;
-  border-radius: 0 0 1rem 1rem;
-  text-align: center;
-  background: rgba(255,255,255, 0.5);
+section:nth-child(3) {
+  grid-column: 3;
+  justify-self: end;
+  /* horizontale alignment (inline) */
+  align-self: center;
+  /* verticale alignment (block) */
 }
 
-body.expand {
-  font-size: 1.15em;
+/* ALIGNMENT DESKTOP ITEMS */
+.desktop-icons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5rem;
 }
 
-body.expand article {
-  width: 60vw;
-  max-width: 60vw;
+/* ALIGNMENT DESKTOP FIGURES */
+.desktop-icons>figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .5em;
 }
 
-body.expand button svg:first-of-type {
-  opacity: 0;
-  transition-delay: 0ms;
+/* RESIZING FIGURE IMAGES */
+.desktop-icons>figure img {
+  width: auto;
+  height: 5rem;
 }
 
-body.expand button svg:nth-of-type(2) {
-  opacity: 1;
-  transition-delay: .25s;
+/* ALIGNMENT CLICKED DESKTOP ITEMS */
+.desktop-icons-content {
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  width: 400px;
+  height: 600px;
+  position: absolute;
+  left: 0; 
+  right: 0;
+  margin: auto;
+  visibility: hidden;
 }
 
-body.expand dd {
-  font-size: 1.75em;
+.desktop-icons-items {
+  width: 200px;
+  height: 200px;
 }
 
-body.expand img {
-  width: 15em;
-  height: 15em;
-} */
+.desktop-icons-items:nth-child(1) {
+  grid-row: 1;
+  grid-column: 1; 
+  background: beige;
+}
+
+.desktop-icons-items:nth-child(2) {
+  grid-row: 2;
+  grid-column: 1; 
+  background: blue;
+}
+
+.desktop-icons-items:nth-child(3) {
+  grid-row: 3;
+  grid-column: 1; 
+  background: red;
+}
+
+.desktop-icons-items:nth-child(4) {
+  grid-row: 1;
+  grid-column: 2; 
+  background: purple;
+}
+
+.desktop-icons-items:nth-child(5) {
+  grid-row: 2;
+  grid-column: 2; 
+  background: orange;
+}
+
+.desktop-icons-items:nth-child(6) {
+  grid-row: 3;
+  grid-column: 2; 
+  background: green;
+}
+
+/* STYLING OPENED WINDOW */
+.opened-window {
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 8px;
+  border-color: #663C2D;
+  box-shadow: 5px 5px #663C2D;
+  position: relative;
+}
+
+#item1.active {
+  visibility: visible;
+}
+
+#item2.active {
+  visibility: visible;
+}
+
+#item3.active {
+  visibility: visible;
+}
+
+#item4.active {
+  visibility: visible;
+}
+
+#item5.active {
+  visibility: visible;
+}
+
+#item6.active {
+  visibility: visible;
+}
