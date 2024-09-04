@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 /* CURSOR and FONT */
 body {
-  cursor: url('assets/cursor-image-2_1.png'), pointer;
+  cursor: url('/assets/cursor-image-2_1.png'), pointer;
 
   font-family: "VT323", monospace;
   font-weight: 400;
@@ -12,11 +16,11 @@ body {
 }
 
 .desktop-icons>figure:hover {
-  cursor: url('assets/cursor-image-hover-2.png'), pointer;
+  cursor: url('/assets/cursor-image-hover-2.png'), pointer;
 }
 
 button:hover {
-  cursor: url('assets/cursor-image-hover-2.png'), pointer;
+  cursor: url('/assets/cursor-image-hover-2.png'), pointer;
 }
 
 /* ALIGNMENT MAIN */
@@ -74,13 +78,13 @@ section:nth-child(3) {
 
 /* ALIGNMENT CLICKED DESKTOP ITEMS */
 .desktop-icons-content {
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
   width: 400px;
   height: 600px;
   position: absolute;
-  left: 0; 
+  left: 0;
   right: 0;
   margin: auto;
   visibility: hidden;
@@ -94,37 +98,37 @@ section:nth-child(3) {
 
 .desktop-icons-items:nth-child(1) {
   grid-row: 1;
-  grid-column: 1; 
+  grid-column: 1;
   background: beige;
 }
 
 .desktop-icons-items:nth-child(2) {
   grid-row: 2;
-  grid-column: 1; 
+  grid-column: 1;
   background: blue;
 }
 
 .desktop-icons-items:nth-child(3) {
   grid-row: 3;
-  grid-column: 1; 
+  grid-column: 1;
   background: red;
 }
 
 .desktop-icons-items:nth-child(4) {
   grid-row: 1;
-  grid-column: 2; 
+  grid-column: 2;
   background: purple;
 }
 
 .desktop-icons-items:nth-child(5) {
   grid-row: 2;
-  grid-column: 2; 
+  grid-column: 2;
   background: orange;
 }
 
 .desktop-icons-items:nth-child(6) {
   grid-row: 3;
-  grid-column: 2; 
+  grid-column: 2;
   background: green;
 }
 
@@ -161,25 +165,31 @@ section:nth-child(3) {
   border-color: #663C2D;
   box-shadow: 5px 5px #663C2D;
   position: relative;
+  width: 50em;
+  height: 28em;
+  background-color: #F8F6E9;
 }
 
 /* ALIGNMENT and STYLING BUTTONS WINDOW BAR and BAR */
 .window-bar {
-  display: grid; 
+  display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border-bottom-style: solid;
+  border-width: 4px;
+  border-color: #663C2D;
 }
 
-.window-icons > li {
-  list-style: none; 
+.window-icons>li {
+  list-style: none;
 }
 
 .window-icons {
-  display: flex; 
-  flex-direction: row; 
+  display: flex;
+  flex-direction: row;
   gap: .7em;
 }
 
-.window-icons li > button {
+.window-icons li>button {
   border-radius: 50%;
   width: 1rem;
   height: 1rem;
@@ -191,18 +201,49 @@ section:nth-child(3) {
 }
 
 .button2 {
-  background-color: #FCD8A0; 
+  background-color: #FCD8A0;
 }
 
 .button3 {
   background-color: #D2E7CC;
 }
 
-.window-bar > h2 {
-  justify-self: end;
-  font-size: .8rem;
+.window-bar>h2 {
+  font-size: 1.5rem;
 }
 
 .window-main-content {
   padding: 0rem 3rem 1.5rem 3rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.window-main-content>img {
+  width: 80em;
+  height: 15em;
+  object-fit: cover;
+}
+
+.title-info h1 {
+  font-size: 3rem;
+}
+
+.title-info p {
+  font-size: 1.2rem;
+}
+
+.window-main-button {
+  border-style: none;
+  width: 8rem;
+  height: 2rem;
+  font-family: "VT323", monospace;
+  font-size: 1.5rem;
+  background-color: #FFE3F3;
+  box-shadow: 5px 5px #FF8282;
+  /* border-radius: 16px; */
+  float: right;
+  margin-right: 4rem;
 }
