@@ -1,6 +1,6 @@
 /* CURSOR and FONT */
 body {
-  cursor: url('/assets/cursor-image.png'), pointer;
+  cursor: url('assets/cursor-image-2_1.png'), pointer;
 
   font-family: "VT323", monospace;
   font-weight: 400;
@@ -12,11 +12,11 @@ body {
 }
 
 .desktop-icons>figure:hover {
-  cursor: url('/assets/cursor-image-hover.png'), pointer;
+  cursor: url('assets/cursor-image-hover-2.png'), pointer;
 }
 
 button:hover {
-  cursor: url('/assets/cursor-image-hover.png'), pointer;
+  cursor: url('assets/cursor-image-hover-2.png'), pointer;
 }
 
 /* ALIGNMENT MAIN */
@@ -55,7 +55,7 @@ section:nth-child(3) {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3.5rem;
+  gap: 3.5em;
 }
 
 /* ALIGNMENT DESKTOP FIGURES */
@@ -69,7 +69,7 @@ section:nth-child(3) {
 /* RESIZING FIGURE IMAGES */
 .desktop-icons>figure img {
   width: auto;
-  height: 5rem;
+  height: 5em;
 }
 
 /* ALIGNMENT CLICKED DESKTOP ITEMS */
@@ -86,6 +86,7 @@ section:nth-child(3) {
   visibility: hidden;
 }
 
+/* STYLING & GRID ASSIGNMENTS DESKTOP ITEMS */
 .desktop-icons-items {
   width: 200px;
   height: 200px;
@@ -127,16 +128,7 @@ section:nth-child(3) {
   background: green;
 }
 
-/* STYLING OPENED WINDOW */
-.opened-window {
-  border-style: solid;
-  border-width: 4px;
-  border-radius: 8px;
-  border-color: #663C2D;
-  box-shadow: 5px 5px #663C2D;
-  position: relative;
-}
-
+/* CLICKED DESKTOP ITEMS ACTIVE */
 #item1.active {
   visibility: visible;
 }
@@ -159,4 +151,58 @@ section:nth-child(3) {
 
 #item6.active {
   visibility: visible;
+}
+
+/* STYLING OPENED WINDOW */
+.opened-window {
+  border-style: solid;
+  border-width: 4px;
+  border-radius: 8px;
+  border-color: #663C2D;
+  box-shadow: 5px 5px #663C2D;
+  position: relative;
+}
+
+/* ALIGNMENT and STYLING BUTTONS WINDOW BAR and BAR */
+.window-bar {
+  display: grid; 
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.window-icons > li {
+  list-style: none; 
+}
+
+.window-icons {
+  display: flex; 
+  flex-direction: row; 
+  gap: .7em;
+}
+
+.window-icons li > button {
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  border-style: none;
+}
+
+.button1 {
+  background-color: #EAA594;
+}
+
+.button2 {
+  background-color: #FCD8A0; 
+}
+
+.button3 {
+  background-color: #D2E7CC;
+}
+
+.window-bar > h2 {
+  justify-self: end;
+  font-size: .8rem;
+}
+
+.window-main-content {
+  padding: 0rem 3rem 1.5rem 3rem;
 }
