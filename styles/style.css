@@ -4,7 +4,7 @@
 
 /* CURSOR and FONT */
 body {
-  cursor: url('/assets/cursor-image-2_1.png'), pointer;
+  cursor: url('../assets/cursor-image-2_1.png'), pointer;
 
   font-family: "VT323", monospace;
   font-weight: 400;
