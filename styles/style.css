@@ -4,7 +4,7 @@
 
 /* CURSOR and FONT */
 body {
-  cursor: url('assets/cursor-image-2_1.png'), pointer;
+  cursor: url('/assets/cursor-image-2_1.png'), pointer;
 
   font-family: "VT323", monospace;
   font-weight: 400;
@@ -14,20 +14,20 @@ body {
   width: 95vw;
   margin: auto;
 
-  background-image: url(assets/wallpapers/wallpaper-brown.jpg);
+  background-image: url(/assets/wallpapers/wallpaper-brown.jpg);
   background-size: cover;
 }
 
 .desktop-icons>figure:hover {
-  cursor: url('assets/cursor-image-hover-2.png'), pointer;
+  cursor: url('/assets/cursor-image-hover-2.png'), pointer;
 }
 
 button:hover {
-  cursor: url('assets/cursor-image-hover-2.png'), pointer;
+  cursor: url('/assets/cursor-image-hover-2.png'), pointer;
 }
 
 .desktop-icons-content:hover {
-  cursor: url('assets/cursor-image-hover-2.png'), pointer;
+  cursor: url('/assets/cursor-image-hover-2.png'), pointer;
 }
 
 /* ALIGNMENT MAIN */
@@ -521,14 +521,20 @@ main {
 }
 
 /* MEDIA QUERIES */
-/* @media (max-width: 480px) {
-  
+@media (max-width: 480px) {
+
   body {
     font-size: 12px;
+    width: 80vw;
+    background-image: url(/assets/wallpapers/wallpaper-green.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: scroll;
   }
 
   .desktop-icons {
-    display: none; 
+    display: none;
   }
 
   .desktop-icons-content {
@@ -536,73 +542,400 @@ main {
   }
 
   main {
-    display: grid; 
+    display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(7, 1fr);
-    grid-template-areas: 
-    "opened-window"
-    "mijn-hond"
-    "sushi"
-    "crochet"
-    "coderen"
-    "films-kijken"
-    "vulpen";
+    grid-template-areas:
+      "opened-window"
+      "mijn-hond"
+      "sushi"
+      "crochet"
+      "coderen"
+      "films-kijken"
+      "vulpen";
   }
 
   .opened-window {
     grid-area: opened-window;
-    position: relative; 
-
+    position: relative;
   }
 
   #item1 {
     grid-area: mijn-hond;
-    position: relative; 
-    top: initial; 
-    left: initial; 
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  #item1>img {
+    width: 15rem;
+    height: 14rem;
   }
 
   #item2 {
     grid-area: sushi;
-    position: relative; 
-    top: initial; 
-    left: initial; 
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  #item2>img {
+    width: 15rem;
+    height: 14rem;
   }
 
   #item3 {
     grid-area: crochet;
-    position: relative; 
-    top: initial; 
-    left: initial; 
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  #item3>img {
+    width: 15rem;
+    height: 14rem;
   }
 
   #item4 {
     grid-area: coderen;
-    position: relative; 
-    top: initial; 
-    left: initial; 
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
   }
 
-  #item4 {
+  #item4>img {
+    width: 15rem;
+    height: 14rem;
+  }
+
+  #item5 {
     grid-area: films-kijken;
-    position: relative;     
-    top: initial; 
-    left: initial; 
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  #item5>img {
+    width: 15rem;
+    height: 14rem;
   }
 
   #item6 {
     grid-area: vulpen;
-    position: relative; 
-    top: initial; 
-    left: initial; 
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
   }
 
+  #item6>img {
+    width: 15rem;
+    height: 14rem;
+  }
+
+  .opened-window {
+    width: 18rem;
+    height: 48rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .window-bar>h2 {
+    font-size: .8rem;
+    margin-left: -1rem;
+  }
+
+  .window-main-content {
+    padding: 0rem 1rem 0rem 1rem;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "h1"
+      "p"
+      "img"
+      "button";
+  }
+
+  .title-info h1 {
+    grid-area: h1;
+  }
+
+  .window-main-content>img {
+    grid-area: img;
+    width: 15rem;
+    height: 14rem;
+    margin: auto;
+    margin-top: -23rem;
+  }
+
+  .title-info p {
+    grid-area: p;
+    margin-top: -1rem;
+  }
+
+  .window-main-button {
+    grid-area: button;
+    margin-top: -50rem;
+  }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
+  body {
+    font-size: 12px;
+    width: 80vw;
+    background-image: url(/assets/wallpapers/wallpaper-green.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: scroll;
+  }
 
+  .desktop-icons {
+    display: none;
+  }
+
+  .desktop-icons-content {
+    visibility: visible;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-areas:
+      "opened-window"
+      "mijn-hond"
+      "sushi"
+      "crochet"
+      "coderen"
+      "films-kijken"
+      "vulpen";
+  }
+
+  .opened-window {
+    grid-area: opened-window;
+    position: relative;
+  }
+
+  #item1 {
+    grid-area: mijn-hond;
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  #item1>img {
+    width: 15rem;
+    height: 14rem;
+  }
+
+  #item2 {
+    grid-area: sushi;
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  #item2>img {
+    width: 15rem;
+    height: 14rem;
+  }
+
+  #item3 {
+    grid-area: crochet;
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  #item3>img {
+    width: 15rem;
+    height: 14rem;
+  }
+
+  #item4 {
+    grid-area: coderen;
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  #item4>img {
+    width: 15rem;
+    height: 14rem;
+  }
+
+  #item5 {
+    grid-area: films-kijken;
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  #item5>img {
+    width: 15rem;
+    height: 14rem;
+  }
+
+  #item6 {
+    grid-area: vulpen;
+    position: relative;
+    top: initial;
+    left: initial;
+    width: 18rem;
+    height: 18rem;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+
+  #item6>img {
+    width: 15rem;
+    height: 14rem;
+  }
+
+  .opened-window {
+    width: 18rem;
+    height: 48rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .window-bar>h2 {
+    font-size: .8rem;
+    margin-left: -1rem;
+  }
+
+  .window-main-content {
+    padding: 0rem 1rem 0rem 1rem;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+      "h1"
+      "p"
+      "img"
+      "button";
+  }
+
+  .title-info h1 {
+    grid-area: h1;
+  }
+
+  .window-main-content>img {
+    grid-area: img;
+    width: 15rem;
+    height: 14rem;
+    margin: auto;
+    margin-top: -23rem;
+  }
+
+  .title-info p {
+    grid-area: p;
+    margin-top: -1rem;
+  }
+
+  .window-main-button {
+    grid-area: button;
+    margin-top: -50rem;
+  }
 }
 
-@media (min-width: 769px) and (max-width: 1279px) {
+@media (min-width: 769px) and (max-width: 900px) {
+  body {
+    background-size: cover 100vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: auto;
+    font-size: 12px;
+  }
 
-} */
+  .opened-window {
+    width: 60vw;
+    height: 75vh;
+  }
+
+  .window-main-content {
+    margin-top: -.5rem;
+  }
+
+  .title-info p {
+    margin-top: -1.5rem;
+  }
+
+  .window-main-button {
+    margin-top: -2rem;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1200px) {
+  body {
+    background-size: cover 100vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: auto;
+    font-size: 12px;
+  }
+
+  .opened-window {
+    width: 60vw;
+    height: 70vh;
+  }
+
+  .window-main-content {
+    margin-top: -.5rem;
+  }
+
+  .title-info p {
+    margin-top: -1.5rem;
+  }
+
+  .window-main-button {
+    margin-top: -2rem;
+  }
+}
