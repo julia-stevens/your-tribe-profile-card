@@ -14,7 +14,7 @@
 
     <main>
       <!-- DESKTOP ITEMS LINKS -->
-      <section class="desktop-icons">
+      <div class="desktop-icons" id="desktop-items-left">
         <figure id="figure1">
           <img src="assets/desktop-icons/icon-browser.png" alt="retro icoon browser">
           <figcaption>mijn hond</figcaption>
@@ -27,16 +27,16 @@
           <img src="assets/desktop-icons/icon-doc.png" alt="retro icoon browser">
           <figcaption>crochet</figcaption>
         </figure>
-      </section>
+      </div>
 
       <!-- OPENED WINDOW -->
-      <section class="opened-window">
+      <section class="opened-window"  class="tilt-window" id="opened-window" data-tilt data-tilt-glare data-tilt-max-glare="0.4" >
          <!-- !!! article of div?? -->    
           <article class="window-bar">
             <ul class="window-icons">
-              <li><button class="button1"></button></li>
-              <li><button class="button2"></button></li>
-              <li><button class="button3"></button></li>
+              <li><button class="button1" id="buttonRed"></button></li>
+              <li><button class="button2" id="buttonOrange"></button></li>
+              <li><button class="button3" id="buttonGreen"></button></li>
             </ul>
             <h2>visitekaartje.julia-stevens</h2>
           </article>
@@ -45,15 +45,15 @@
             <!-- !!! div?? -->
             <div class="title-info">
               <h1>Julia Stevens</h1>
-              <p>Hoi! Ik ben een frontender in spé. Ik wil vanalles leren over HTML, CSS en Javascript en nieuwe technieken blijven leren ontdekken. Bekijk mijn bureaublad mij iets beter te leren kennen.</p>
+              <p>Hoi! Ik ben een frontender in spé. Ik wil van alles leren over HTML, CSS en Javascript en nieuwe technieken blijven leren ontdekken. Bekijk mijn bureaublad om mij iets beter te leren kennen.</p>
             </div>
           </article>
           <!-- !!! deze button in de article of juist niet? ivm positionering op window -->
-          <button class="window-main-button">OK</button>
+          <button class="window-main-button" id="window-main-button">OK</button>
         </section>
 
       <!-- DESKTOP ITEMS RECHTS -->
-      <section class="desktop-icons">
+      <div class="desktop-icons" id="desktop-items-right">
         <figure id="figure4">
           <img src="assets/desktop-icons/icon-file.png" alt="retro icoon browser">
           <figcaption>coderen</figcaption>
@@ -66,38 +66,38 @@
           <img src="assets/desktop-icons/icon-notepad.png" alt="retro icoon browser">
           <figcaption>vulpen</figcaption>
         </figure>
-      </section>
+      </div>
 
       <!-- GRID CLICKED DESKTOP ITEMS -->
-      <!-- !!! is dit de juiste methode?? -->
-      <section class="desktop-icons-content">
-        <article id="item1" class="desktop-icons-items">
+      <div class="desktop-icons-content">
+        <div id="item1" class="desktop-icons-items" class="tilt-window" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <h3>mijn hond</h3>
-          <img src="" alt="afbeelding mijn hond">
-        </article>
-        <article id="item2" class="desktop-icons-items">
+          <img src="assets/desktop-hond.jpeg" alt="afbeelding mijn hond">
+        </div>
+        <div id="item2" class="desktop-icons-items" class="tilt-window" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <h3>sushi</h3>
-          <img src="" alt="afbeelding sushi">
-        </article>
-        <article id="item3" class="desktop-icons-items">
+          <img src="assets/desktop-sushi.webp" alt="afbeelding sushi">
+        </div>
+        <div id="item3" class="desktop-icons-items" class="tilt-window" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <h3>crochet</h3>
-          <img src="" alt="afbeelding crochet">
-        </article>
-        <article id="item4" class="desktop-icons-items">
+          <img src="assets/desktop-crochet.jpg" alt="afbeelding crochet">
+        </div>
+        <div id="item4" class="desktop-icons-items" class="tilt-window" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <h3>coderen</h3>
-          <img src="" alt="afbeelding coderen">
-        </article>
-        <article id="item5" class="desktop-icons-items">
+          <img src="assets/desktop-coderen.jpg" alt="afbeelding coderen">
+        </div>
+        <div id="item5" class="desktop-icons-items" class="tilt-window" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <h3>films kijken</h3>
-          <img src="" alt="afbeelding films kijken">
-        </article>
-        <article id="item6" class="desktop-icons-items">
+          <img src="assets/desktop-films-kijken.jpg" alt="afbeelding films kijken">
+        </div>
+        <div id="item6" class="desktop-icons-items" class="tilt-window" data-tilt data-tilt-glare data-tilt-max-glare="0.4">
           <h3>vulpen</h3>
-          <img src="" alt="afbeelding vulpen">
-        </article>
-      </section>
+          <img src="assets/desktop-mijn-vulpen.jpg" alt="afbeelding vulpen">
+        </div>
+      </div>
     </main>
     <script src="scripts/script.js"></script>   
+    <script src="scripts/vanilla-tilt.js"></script>   
   </body>
 
 </html>
