@@ -35,6 +35,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-self: center;
+  height: 100vh;  
 }
 
 #desktop-items-left {
@@ -193,6 +194,7 @@ section:nth-child(1) {
   font-size: 1.2rem;
 }
 
+/* STYLING and ALIGNMENT WINDOW BUTTON */
 .window-main-button {
   border-style: none;
   width: 8rem;
@@ -206,10 +208,7 @@ section:nth-child(1) {
   float: right;
 }
 
-main {
-  height: 100vh;
-}
-
+/* STYLING and ALIGNMENT DESKTOP ITEMS */
 .desktop-icons-items {
   border-style: solid;
   border-width: 4px;
@@ -277,10 +276,36 @@ main {
   z-index: 60;
 }
 
+/* OPENED WINDOW STYLING when BUTTON CLICKED */
+.opened-window.activeRed {
+  background-color: #FF828240;
+}
+
+.opened-window.activeOrange {
+  background-color: #FCD8A040;
+}
+
+.opened-window.activeGreen {
+  background-color: #D2E7CC40;
+}
+
+/* ==== ANIMATIONS ==== */
+
+/* BUTTON HOVER  */
+.window-main-button:hover {
+  background-color: #00A9E3;
+  box-shadow: 5px 5px #B7E1F0;
+  scale: 1.5;
+  transition: .3s;
+  animation: rubberBand 1s 1;
+}
+
+/* OPENED WINDOW */
 #opened-window {
   animation: tada 1s 3;
 }
 
+/* DESKTOP ITEMS */
 #figure1.clicked {
   animation: tada 1s 2;
 }
@@ -304,6 +329,82 @@ main {
 #figure6.clicked {
   animation: tada 1s 2;
 }
+/* DESKTOP ITEMS */
+#figure1.active {
+  animation: jello 2s 1;
+}
+
+#figure2.active {
+  animation: jello 2s 1;
+}
+
+#figure3.active {
+  animation: jello 2s 1;
+}
+
+#figure4.active {
+  animation: jello 2s 1;
+}
+
+#figure5.active {
+  animation: jello 2s 1;
+}
+
+#figure6.active {
+  animation: jello 2s 1;
+}
+
+/* DESKTOP ITEMS CONTENT */
+#item1.clicked {
+  animation: tada 1s 1;
+}
+
+#item2.clicked {
+  animation: tada 1s 1;
+}
+
+#item3.clicked {
+  animation: tada 1s 1;
+}
+
+#item4.clicked {
+  animation: tada 1s 1;
+}
+
+#item5.clicked {
+  animation: tada 1s 1;
+}
+
+#item6.clicked {
+  animation: tada 1s 1;
+}
+
+/* DESKTOP ITEMS HOVER */
+#figure1:hover {
+  animation: bounce 1.5s infinite;
+}
+
+#figure2:hover {
+  animation: bounce 1.5s infinite;
+}
+
+#figure3:hover {
+  animation: bounce 1.5s infinite;
+}
+
+#figure4:hover {
+  animation: bounce 1.5s infinite;
+}
+
+#figure5:hover {
+  animation: bounce 1.5s infinite;
+}
+
+#figure6:hover {
+  animation: bounce 1.5s infinite;
+}
+
+/* ==== KEYFRAMES ==== */
 
 /* bron: https://codepen.io/sahil_ranpuri/pen/YmJpVJ */
 @keyframes tada {
@@ -333,15 +434,6 @@ main {
     transform: scale3d(1, 1, 1);
   }
 }
-
-.window-main-button:hover {
-  background-color: #00A9E3;
-  box-shadow: 5px 5px #B7E1F0;
-  scale: 1.5;
-  transition: .3s;
-  animation: rubberBand 1s 1;
-}
-
 
 /* bron: https://codepen.io/chronisp/pen/WqGxdW */
 @keyframes rubberBand {
@@ -413,78 +505,6 @@ main {
   }
 }
 
-#figure1.active {
-  animation: jello 2s 1;
-}
-
-#figure2.active {
-  animation: jello 2s 1;
-}
-
-#figure3.active {
-  animation: jello 2s 1;
-}
-
-#figure4.active {
-  animation: jello 2s 1;
-}
-
-#figure5.active {
-  animation: jello 2s 1;
-}
-
-#figure6.active {
-  animation: jello 2s 1;
-}
-
-#item1.clicked {
-  animation: tada 1s 1;
-}
-
-#item2.clicked {
-  animation: tada 1s 1;
-}
-
-#item3.clicked {
-  animation: tada 1s 1;
-}
-
-#item4.clicked {
-  animation: tada 1s 1;
-}
-
-#item5.clicked {
-  animation: tada 1s 1;
-}
-
-#item6.clicked {
-  animation: tada 1s 1;
-}
-
-#figure1:hover {
-  animation: bounce 1.5s infinite;
-}
-
-#figure2:hover {
-  animation: bounce 1.5s infinite;
-}
-
-#figure3:hover {
-  animation: bounce 1.5s infinite;
-}
-
-#figure4:hover {
-  animation: bounce 1.5s infinite;
-}
-
-#figure5:hover {
-  animation: bounce 1.5s infinite;
-}
-
-#figure6:hover {
-  animation: bounce 1.5s infinite;
-}
-
 /* Bron: https://codepen.io/nelledejones/pen/gOOPWrK */
 @keyframes bounce {
   80% {
@@ -506,18 +526,6 @@ main {
   99% {
     transform: translateY(-3%);
   }
-}
-
-.opened-window.activeRed {
-  background-color: #FF828240;
-}
-
-.opened-window.activeOrange {
-  background-color: #FCD8A040;
-}
-
-.opened-window.activeGreen {
-  background-color: #D2E7CC40;
 }
 
 /* MEDIA QUERIES */
