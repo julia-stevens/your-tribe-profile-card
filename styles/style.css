@@ -14,7 +14,7 @@ body {
   width: 95vw;
   margin: auto;
 
-  background-image: url(../assets/wallpapers/wallpaper-brown.jpg);
+  background-image: url('../assets/wallpapers/wallpaper-brown.jpg');
   background-size: cover;
 }
 
