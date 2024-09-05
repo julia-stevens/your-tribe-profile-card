@@ -14,20 +14,20 @@ body {
   width: 95vw;
   margin: auto;
 
-  background-image: url(/assets/wallpapers/wallpaper-brown.jpg);
+  background-image: url(../assets/wallpapers/wallpaper-brown.jpg);
   background-size: cover;
 }
 
 .desktop-icons>figure:hover {
-  cursor: url('/assets/cursor-image-hover-2.png'), pointer;
+  cursor: url('../assets/cursor-image-hover-2.png'), pointer;
 }
 
 button:hover {
-  cursor: url('/assets/cursor-image-hover-2.png'), pointer;
+  cursor: url('../assets/cursor-image-hover-2.png'), pointer;
 }
 
 .desktop-icons-content:hover {
-  cursor: url('/assets/cursor-image-hover-2.png'), pointer;
+  cursor: url('../assets/cursor-image-hover-2.png'), pointer;
 }
 
 /* ALIGNMENT MAIN */
@@ -526,7 +526,7 @@ main {
   body {
     font-size: 12px;
     width: 80vw;
-    background-image: url(/assets/wallpapers/wallpaper-green.jpg);
+    background-image: url(../assets/wallpapers/wallpaper-green.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -708,7 +708,7 @@ main {
   body {
     font-size: 12px;
     width: 80vw;
-    background-image: url(/assets/wallpapers/wallpaper-green.jpg);
+    background-image: url(../assets/wallpapers/wallpaper-green.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
